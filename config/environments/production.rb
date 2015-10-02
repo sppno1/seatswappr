@@ -28,7 +28,7 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
-  config.action_mailer.default_url_options = { :host => 'pacific-ravine-9739.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'seatswappr.herokuapp.com' }
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
