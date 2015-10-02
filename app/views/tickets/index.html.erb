@@ -14,6 +14,7 @@
 	          <th>Airline</th>
 	          <th>Flight Number</th>
 	          <th>Seat Number</th>
+	          <th>Seat Description</th>
 	          <th>Actions</th>
 	        </tr>
 	      </thead>
@@ -25,6 +26,7 @@
 	          <td><%= ticket.airline %></td>
 	          <td><%= ticket.flight_num %></td>
 	          <td><%= ticket.seat_num %></td>
+	          <td><%= ticket.seat_desc %></td>
 	          <td>
 						  <%= link_to 'Delete this ticket', ticket_path(ticket.id),method: :delete, data: {confirm: "Are you sure?"} %></td>
 	        </tr>
