@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -27,6 +28,7 @@ Rails.application.configure do
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
+  config.action_mailer.default_url_options = { :host => 'pacific-ravine-9739.herokuapp.com' }
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -77,4 +79,31 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: ENV["GMAIL_USERNAME"],
+  password: ENV["GMAIL_PASSWORD"]
+  }
+
+
+
+
+  # # SMTP settings for gmail
+#   config.action_mailer.perform_deliveries = true
+#   config.action_mailer.smtp_settings = {
+#    :address              => "smtp.gmail.com",
+#    :port                 => 587,
+#    :user_name            => ENV['sppno1@gmail.com'],
+#    :password             => ENV['gmail_password'],
+#    :authentication       => "plain",
+#   :enable_starttls_auto => true
+#   }
+end
 end
