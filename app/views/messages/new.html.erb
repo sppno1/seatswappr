@@ -10,7 +10,7 @@
 <%= form_tag messages_path, method: :post do %>
   <div class="form-group">
     <%= label_tag 'message[subject]', 'Subject' %>
-    <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true, value: "Hello, I am interested in swapping seats for #{@ticket.airline} flight #{@ticket.flight_num} on #{@ticket.departure_date}"  %>
+    <%= text_field_tag 'message[subject]', nil, class: 'form-control', required: true, value: "Swap Requested: #{@ticket.airline} flight #{@ticket.flight_num} on #{@ticket.departure_date}, your seat #{@ticket.seat_num}" %>
   </div>
 
     <div class="form-group">
