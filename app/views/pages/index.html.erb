@@ -5,12 +5,13 @@
   	     <p>Tired of assigned seats?</p>
          <p>Swap your seat with SeatSwappr!</p>
   	     <% if user_signed_in? %>
-          <div class="fb-like" data-href="http://www.facebook.com/seatswappr" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+          <li><a href="http://www.facebook.com/seatswappr" class="fb-like" data-layout="button" data-action="like" data-show-faces="true" data-share="true" ></a></li>
+          <li><a href="https://twitter.com/seatswappr" class="twitter-follow-button" data-show-count="false" >Follow @SeatSwappr</a></li>
          <% else %>
           <p><%= link_to 'Register Now', new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
      	<% end %>
     </div>
-    <div class="social" style="padding-top: 30px;">
+    <div class="social" style="padding-top: 20px;">
       <a href="https://www.facebook.com/SeatSwappr" class="btn btn-theme"><span class="faspan"><i class="fa fa-facebook"></span></i></a>
       <a href="https://twitter.com/seatswappr" class="btn btn-theme"><span class="faspan"><i class="fa fa-twitter"></i></span></a>
       <a href="https://plus.google.com/110380317606391783958/" class="btn btn-theme"><span class="faspan"><i class="fa fa-google-plus"></i></span></a>      
@@ -24,7 +25,7 @@
   <div class="about">
     <h3 class="sectionheading">About</h3>
     <hr>
-    <p class="lead"><strong>Oh No!  </strong>You don’t have a seat next to your spouse or your children. You have a middle seat but wanted a window seat? You and your friends can’t gossip because you’re both in different rows? Now what?  
+    <p class="lead"><strong>Oh No!  </strong>You don’t have a seat next to your spouse or children. You have a middle seat but wanted a window seat? You and your friends can’t gossip because you’re both in different rows? Now what?  
     </p>
     <p class="lead"><strong>Don't Worry!  </strong>SeatSwappr is building a peer to peer seat exchange where you can negotiate a seat swap with other passengers prior to boarding.  We hope to eliminate the pre-boarding anxiety of asking a fellow passenger to swap seats.
     </p>
@@ -125,7 +126,7 @@
         <img src="img/portraits/3.jpg" alt="gp.jpg">
         <div class="caption">
           <h3>Gunjan Patel</h3>
-          <p>He has the marketing tips.</p>
+          <p>He has the marketing ideas and strategies.</p>
           <p><a href="https://www.facebook.com/patelgunjan" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
           <a href="https://www.linkedin.com/in/patelgunjan" class="btn btn-theme"><i class="fa fa-linkedin"></i></a></p>
         </div>
