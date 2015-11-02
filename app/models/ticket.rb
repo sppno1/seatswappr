@@ -7,5 +7,6 @@ class Ticket < ActiveRecord::Base
 	validates :flight_num, numericality: true
 	validates :departure_date, presence: true
 	validates :seat_num, presence: true
+	# validates :price, presence: true
 	
 end

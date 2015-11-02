@@ -33,6 +33,11 @@
 	    <%= f.text_field :seat_desc, :placeholder => 'Seat Description (i.e. Window Seat, Exit Row, Economy +', class: 'form-control' %>
 	  </div>
 
+	   <div class="form-group">
+	    <%= f.label "Price: " %><br/>
+	    <%= f.text_field :price, :placeholder => '$ amount needed to swap your seat', class: 'form-control' %>
+	  </div>
+
 	  <div class="actions">
 	    <%= f.submit "Create", class: 'btn btn-primary' %>
 	  </div>
