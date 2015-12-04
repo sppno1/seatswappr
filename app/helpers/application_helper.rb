@@ -1,6 +1,6 @@
 module ApplicationHelper
 	def header(text)
-  content_for(:header) { text.to_s }
+  	content_for(:header) { text.to_s }
 	end
 
 	def gravatar_for(user, size = 30, title = user.name)

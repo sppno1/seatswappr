@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   resources :searches
   devise_for :users, controllers: { 
     sessions: "users/sessions" }
-
+  get 'emailsignup'  => 'emailapi#index'
+  post 'emailapi/subscribe' => 'emailapi#subscribe'
   resources "contacts", only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'pages#index'
+  root to: 'pages#signup'
   resources :conversations, only: [:index, :show, :destroy]
 
   resources :conversations, only: [:index, :show, :destroy] do
@@ -40,8 +41,9 @@ Rails.application.routes.draw do
   get "/messages/new/:id" => "messages#new", :as => :new_message_with_parameter
   get '/newticket' => 'tickets#new'
   delete 'empty_trash', to: 'conversations#empty_trash'
-  get "/landing" => 'pages#landing'
   get "/faq" => 'pages#faq'
+  get "/thankyou" => 'emailapi#thankyou'
+  get "/signup" => 'pages#signup'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
