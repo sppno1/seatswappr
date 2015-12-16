@@ -320,7 +320,7 @@ only screen and (max-width: 770px)  {
   }
 
   /* If any other target-item-# is targeted, let's select it using the sibling selector, make it fade in, and place it on top of the pile using z-index: 3.  Here's where you'd add more target items if your carousel has more than three items. It might be worth adding like 10 items right off the bat. */
-  #target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3 {
+  #target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3, #target-item-4:target ~ .item-4 {
     z-index: 3;
     opacity: 1;
   }
