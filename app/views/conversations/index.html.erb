@@ -1,3 +1,5 @@
+<% content_for :title, "Inbox" %>
+
 <% header "Your Inbox (#{current_user.mailbox.inbox(:unread => true).count(:id, :distinct => true)})" %>
 
 <div class="row">

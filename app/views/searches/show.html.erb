@@ -1,8 +1,9 @@
+<% content_for :title, "Search Results" %>
 <h3> Search Results </h3>
 
     <%= link_to "Back to search", new_search_path %>
     <% if @search.search_tickets.empty? %>
-    	<h3>No tickets found</h3>
+    	<h4>No seats available for this flight. Please check back later.</h4>
 
     <% else %>
     <div>

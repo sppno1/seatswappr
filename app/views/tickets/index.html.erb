@@ -1,11 +1,12 @@
-<h3> All your Seats </h3>
+<% content_for :title, "Seats" %>
+<h3> My Seats </h3>
 		<% current_userid = current_user.id %>
 		<% current_userid %>
 		<% if @ticket.count==0 %>
 			<h3>You have not posted any seats</h3>
-			<%= link_to "Add your ticket now", new_ticket_path, method: "get" %>
+			<%= link_to "Add your seat now", new_ticket_path, method: "get" %>
 		<% else %>
-			 <%= link_to "Add new Ticket", new_ticket_path, method: "get" %>
+			 <%= link_to "Add new seat", new_ticket_path, method: "get" %>
 			<table class="table">
 	      <thead>
 	        <tr>
@@ -30,7 +31,7 @@
 	          <td><%= ticket.seat_desc %></td>
 	          <td><%= number_to_currency(ticket.price) %></td>
 	          <td>
-						  <%= link_to 'Delete this ticket', ticket_path(ticket.id),method: :delete, data: {confirm: "Are you sure?"} %></td>
+						  <%= link_to 'Delete this seat', ticket_path(ticket.id),method: :delete, data: {confirm: "Are you sure?"} %></td>
 	        </tr>
 	      <% end %>
 	      </tbody>
