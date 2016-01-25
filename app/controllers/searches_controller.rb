@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-
+	include Mobylette::RespondToMobileRequests
 	def new
 		@search = Search.new
 		@airlines= Ticket.uniq.pluck(:airline)

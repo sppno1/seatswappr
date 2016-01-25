@@ -1,4 +1,5 @@
 class EmailapiController < ApplicationController
+	include Mobylette::RespondToMobileRequests
 	def index
 	end
 

@@ -1,4 +1,5 @@
 class Users::UnlocksController < Devise::UnlocksController
+  include Mobylette::RespondToMobileRequests
   # GET /resource/unlock/new
   # def new
   #   super

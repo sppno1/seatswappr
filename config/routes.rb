@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'pages#signup'
+  root to: 'pages#index'
   resources :conversations, only: [:index, :show, :destroy]
 
   resources :conversations, only: [:index, :show, :destroy] do

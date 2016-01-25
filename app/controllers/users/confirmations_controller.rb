@@ -1,4 +1,5 @@
 class Users::ConfirmationsController < Devise::ConfirmationsController
+  include Mobylette::RespondToMobileRequests
   # GET /resource/confirmation/new
   # def new
   #   super

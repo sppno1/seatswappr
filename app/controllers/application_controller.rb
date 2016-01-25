@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 	end
 	
   protect_from_forgery with: :exception
-
+  include Mobylette::RespondToMobileRequests
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 	protected

@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  include Mobylette::RespondToMobileRequests
   def new
       @contact = Contact.new
   end

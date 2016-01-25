@@ -22,6 +22,8 @@ gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 gem 'mail_form'
 gem 'simple_form'
+gem 'mobylette' 
+gem 'jquery_mobile_rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

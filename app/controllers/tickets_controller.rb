@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
 
 	before_action :authenticate_user!
+	include Mobylette::RespondToMobileRequests
 	
 	def new
   	@ticket = Ticket.new

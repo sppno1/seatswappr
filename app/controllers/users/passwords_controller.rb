@@ -1,4 +1,5 @@
 class Users::PasswordsController < Devise::PasswordsController
+  include Mobylette::RespondToMobileRequests
   # GET /resource/password/new
   # def new
   #   super
